@@ -1,15 +1,16 @@
 import random
 soma=0
 media=0
+add=None
 Lista=[random.randint(1,100)for _ in range(5)]
 
 def main():
     def adicionarLista(lista):
-        lista.append()
+        lista.append(add)
         return lista
 
     def removerLista(lista):
-        lista.remove()
+        lista.remove(rm)
         return lista
 
     def exibirListaAtual(lista):
@@ -28,21 +29,22 @@ def main():
         try:
             digito=int(input("Digite 1 para adicionar um numero a lista\nDigite 2 para remover um numero da lista\nDigite 3 para exibir a lista\nDigite 4 para somar a lista\nDigite 5 para saber a media da lista\ndigite 6 para sair\n:"))
             if digito == 1:
-                add=input(int("digite um numero para adicionar")) 
-                print(adicionarLista(add))
-            if digito == 2:
-                rm=input(int("digite um numero para remover"))
-                print(removerLista(rm))
-            if digito == 3:
+                add=input(int("digite um numero para adicionar"))
+                print(adicionarLista(Lista))
+            elif digito == 2:
+                rm=input("digite um numero para remover")
+                print(removerLista(Lista))
+            elif digito == 3:
                 print(exibirListaAtual(Lista))
-            if digito == 4:
+            elif digito == 4:
                 print(calcularLista(soma))
-            if digito == 5: 
+            elif digito == 5: 
                 print(mediaLista(Lista))    
-            if digito == 6:
+            elif digito == 6:
                 print("Encerrando processo.")
                 break    
             else:
                 print("Digite um numero valido")   
-              
+        except Exception:
+            print("é isso")      
 main()
