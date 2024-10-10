@@ -24,15 +24,15 @@ def main():
         media=sum(lista)/len(lista)
         return media
 
-    while true:
+    while True:
         try:
-            digito=int(print("Digite 1 para adicionar um numero a lista\nDigite 2 para remover um numero da lista\nDigite 3 para exibir a lista\nDigite 4 para somar a lista\nDigite 5 para saber a media da lista\ndigite 6 para sair"))
+            digito=int(input("Digite 1 para adicionar um numero a lista\nDigite 2 para remover um numero da lista\nDigite 3 para exibir a lista\nDigite 4 para somar a lista\nDigite 5 para saber a media da lista\ndigite 6 para sair\n:"))
             if digito == 1:
-
+                add=input(int("digite um numero para adicionar")) 
+                print(adicionarLista(add))
             if digito == 2:
-                add=print(int("digite um numero para remover"))
-                removerLista(add)
-                print()
+                rm=input(int("digite um numero para remover"))
+                print(removerLista(rm))
             if digito == 3:
                 print(exibirListaAtual(Lista))
             if digito == 4:
@@ -43,5 +43,6 @@ def main():
                 print("Encerrando processo.")
                 break    
             else:
-                print("Digite um numero valido")    
+                print("Digite um numero valido")   
+              
 main()
